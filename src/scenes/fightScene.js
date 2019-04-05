@@ -29,6 +29,7 @@ export default class FightScene extends Phaser.Scene {
         this.worldLayer = map.createStaticLayer('ground', tileset, 0, 0);
 
         this.player = this.physics.add.sprite(100, 100, 'hero', 0);
+        this.player.setScale(2);
     }
 
     update(){
@@ -47,7 +48,7 @@ export default class FightScene extends Phaser.Scene {
             // }
         }
         if(this.moving){
-            this.physics.moveTo(this.player, this.targetPoint.x, this.targetPoint.y, 50);
+            this.physics.moveTo(this.player, this.targetPoint.x, this.targetPoint.y, 150);
             if(parseInt(this.player.x) >= this.targetPoint.x - 1 && parseInt(this.player.x) <= this.targetPoint.x + 1 && parseInt(this.player.y) >= this.targetPoint.y -1 && parseInt(this.player.y) <= this.targetPoint.y + 1){
                 console.log('hes stopped moving');
                 this.moving = false;
