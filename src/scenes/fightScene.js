@@ -39,7 +39,7 @@ export default class FightScene extends Phaser.Scene {
             this.moving = true;
             const pointerTileXY = this.worldLayer.worldToTileXY(this.input.x, this.input.y);
             this.targetPoint = this.worldLayer.tileToWorldXY(pointerTileXY.x, pointerTileXY.y)
-            
+            // got this to work
             console.log(this.targetPoint);
             //  400 is the speed it will move towards the mouse
             //  if it's overlapping the mouse, don't move any more
